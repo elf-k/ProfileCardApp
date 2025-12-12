@@ -1,5 +1,5 @@
 import { useFonts } from 'expo-font';
-import { View, Text, StyleSheet } from 'react-native';
+import ProfileScreen from './screens/ProfileScreen';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -11,22 +11,6 @@ export default function App() {
     return null;
   }
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Fonts Loaded!</Text>
-    </View>
-  );
+  return <ProfileScreen />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontFamily: 'MontserratBold',
-    fontSize: 24,
-  },
-});
 
